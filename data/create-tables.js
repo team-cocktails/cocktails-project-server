@@ -53,7 +53,7 @@ async function run() {
                     measurements15 TEXT,
                     instructions TEXT NOT NULL,
                     picture TEXT NOT NULL,
-                    idDrink INTEGER NOT NULL,
+                    id_drink INTEGER NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
