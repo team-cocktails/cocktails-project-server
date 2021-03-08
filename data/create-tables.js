@@ -51,6 +51,7 @@ async function run() {
                     measurements13 TEXT,
                     measurements14 TEXT,
                     measurements15 TEXT,
+                    times_drank INTEGER NOT NULL,
                     instructions TEXT NOT NULL,
                     picture TEXT NOT NULL,
                     id_drink INTEGER NOT NULL,
@@ -60,7 +61,7 @@ async function run() {
 
     console.log('create tables complete', getEmoji(), getEmoji(), getEmoji());
   }
-  catch(err) {
+  catch (err) {
     // problem? let's see the error...
     console.log(err);
   }
