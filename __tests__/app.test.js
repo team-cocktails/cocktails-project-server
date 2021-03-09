@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable quotes */
 require('dotenv').config();
 
 const { execSync } = require('child_process');
