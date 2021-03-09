@@ -33,7 +33,7 @@ describe('app routes', () => {
       return client.end(done);
     });
 
-    test('POST returns api/menu data', async() => {
+    test('POST route adds a drink to our menu', async() => {
 
       const newDrink = 
         {
@@ -65,7 +65,7 @@ describe('app routes', () => {
     });
 
 
-    test('PUT returns api/menu data', async() => {
+    test('This PUT route increments times_drank', async() => {
 
       const newDrink = 
         {
@@ -85,7 +85,7 @@ describe('app routes', () => {
     });
 
 
-    test('GET returns api/menu data', async() => {
+    test('This GET route returns menu data', async() => {
 
       const expectation = [
         {
@@ -109,7 +109,7 @@ describe('app routes', () => {
     });
 
 
-    test('GET returns api/menu data', async() => {
+    test('This GET route searches the API by name and returns a match', async() => {
 
       const expectation = [
         {
@@ -180,7 +180,7 @@ describe('app routes', () => {
       expect([data.body]).toEqual(expectation);
     });
 
-    test('GET returns api/menu data', async() => {
+    test('This GET route returns all items filtered by ingredients, in this case bourbon', async() => {
 
       const expectation =
         {
@@ -197,5 +197,22 @@ describe('app routes', () => {
 
       expect(data.body.drinks[0]).toEqual(expectation);
     });
+
+    // test('GET returns random drink from API', async() => {
+
+    //   const expectation = [
+    //     {
+
+    //   }
+    //   ];
+
+    //   const data = await fakeRequest(app)
+    //     .get('/api/random')
+    //     .set('Authorization', token)
+    //     .expect('Content-Type', /json/)
+    //     .expect(200);
+
+    //   expect(data.body.drinks).toEqual(expectation);
+    // });
   });
 });
