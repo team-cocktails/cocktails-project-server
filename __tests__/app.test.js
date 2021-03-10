@@ -198,21 +198,21 @@ describe('app routes', () => {
       expect(data.body.drinks[0]).toEqual(expectation);
     });
 
-    // test('GET returns random drink from API', async() => {
+    test('GET returns random drink from API', async() => {
 
-    //   const expectation = [
-    //     {
+      const expectation = [
+        {
 
-    //   }
-    //   ];
+      }
+      ];
 
-    //   const data = await fakeRequest(app)
-    //     .get('/api/random')
-    //     .set('Authorization', token)
-    //     .expect('Content-Type', /json/)
-    //     .expect(200);
+      const data = await fakeRequest(app)
+        .get('/api/random')
+        .set('Authorization', token)
+        .expect('Content-Type', /json/)
+        .expect(200);
 
-    //   expect(data.body.drinks).toEqual(expectation);
-    // });
+      expect(expectation).toEqual(expect.anything(data.body.drinks));
+    });
   });
 });
