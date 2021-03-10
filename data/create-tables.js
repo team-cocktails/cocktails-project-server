@@ -20,7 +20,7 @@ async function run() {
                 CREATE TABLE cocktails (
                     id SERIAL PRIMARY KEY NOT NULL,
                     drink_name VARCHAR(512) NOT NULL,
-                    category VARCHAR(512) NOT NULL,
+                    category VARCHAR(512),
                     times_drank INTEGER NOT NULL,
                     picture TEXT NOT NULL,
                     id_drink INTEGER NOT NULL,
